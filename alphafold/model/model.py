@@ -216,9 +216,12 @@ class RunModel:
                 result["representations"] = {
                     "pair": prev["prev_pair"],
                     "single": prev["prev_msa_first_row"],
-                    # (neil) IFNDEF 23.05
-                    "msa": result["representations"]["msa"]
-                    # (neil) ENDIF 23.05
+                    # (neil) IFNDEF (23.05)
+                    "msa": result["representations"]["msa"],
+                    # (neil) ENDIF (23.05)
+                    # (neil) IFNDEF (20.06)
+                    "col_attention": result["representations"]["col_attention"]
+                    # (neil) ENDIF (20.06)
                 }
 
             # callback
